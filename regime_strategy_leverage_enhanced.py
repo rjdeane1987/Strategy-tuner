@@ -20,7 +20,7 @@ vol_targeting = st.sidebar.checkbox("Enable Volatility Targeting", value=False)
 target_vol = st.sidebar.slider("Target Volatility", 0.05, 0.5, 0.15, 0.01)
 
 # Download data
-@st.cache_data
+@st.cache
 def load_data(ticker, start, end):
     df = yf.download(ticker, start=start, end=end)
     df = df["Adj Close"].to_frame(name="price")
