@@ -23,6 +23,7 @@ target_vol = st.sidebar.slider("Target Volatility", 0.05, 0.5, 0.15, 0.01)
 @st.cache_data
 def load_data(ticker, start, end):
     df = yf.download(ticker, start=start, end=end)
+    print("DataFrame columns:", df.columns)
     df = df["Adj Close"].to_frame(name="price")
     df["returns"] = df["price"].pct_change()
     return df.dropna()
