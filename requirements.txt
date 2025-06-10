@@ -4,4 +4,5 @@ pandas
 numpy
 hmmlearn
 scikit-learn
-pandas_ta
+setuptools
+ta
