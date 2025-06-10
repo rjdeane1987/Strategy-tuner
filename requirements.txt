@@ -2,5 +2,6 @@ streamlit
 yfinance
 pandas
 numpy
-matplotlib
 hmmlearn
+scikit-learn
+ta-lib
